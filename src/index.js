@@ -1,3 +1,7 @@
-import "./Sass/style.scss"
+import ReactDOM from "react-dom/client";
 
-console.log("Hello webpack");
+import "./index.scss";
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);

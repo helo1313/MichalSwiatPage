@@ -15,9 +15,7 @@ const Introduction = () => {
         </div>
         <div className="contact">
           <FontAwesomeIcon icon={faPhone} />
-          <p>
-            <sub>0048</sub> 609 860 020
-          </p>
+          <p>0048 609 860 020</p>
         </div>
       </div>
     </div>

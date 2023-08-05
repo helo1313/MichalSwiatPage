@@ -1,0 +1,7 @@
+.frame {
+    position: fixed;
+    height: calc(100vh - 2*$FrameSize);
+    width: calc(100vw - 2*$FrameSize);
+    border: $FrameSize solid $FrameColor ;
+    z-index: 999;
+}

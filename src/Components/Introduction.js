@@ -1,9 +1,25 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faEnvelope, faHome } from "@fortawesome/free-solid-svg-icons";
+
 const Introduction = () => {
   return (
     <div className="introduction">
-      <p className="contact"> Gdynia</p>
-      <p className="contact"> Mikołaj@Swiatarchitekt.pl</p>
-      <p className="contact"> 0048 609 860 020</p>
+      <div className="contacts">
+        <div className="contact">
+          <FontAwesomeIcon icon={faHome} />
+          <p>Gdynia</p>
+        </div>
+        <div className="contact">
+          <FontAwesomeIcon icon={faEnvelope} />
+          <p>Mikołaj@Swiatarchitekt.pl</p>
+        </div>
+        <div className="contact">
+          <FontAwesomeIcon icon={faPhone} />
+          <p>
+            <sub>0048</sub> 609 860 020
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

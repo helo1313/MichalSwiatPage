@@ -1,7 +1,7 @@
-import Logo from "./Components/Logo";
-import Introduction from "./Components/Introduction";
-import Project from "./Components/Project";
-import Frame from "./Components/Frame";
+import Logo from "./Components/Logo/Logo";
+import Introduction from "./Components/Introduction/Introduction";
+import Project from "./Components/Project/Project";
+import Frame from "./Components/Frame/Frame";
 
 function App() {
   return (

@@ -1,9 +1,9 @@
 import styles from "./Project.module.scss";
 
-const Project = () => {
+const Project = (props) => {
   return (
     <div className={styles.project}>
-      <div className="SmallImage"></div>
+      <img className={styles.image} src={props.image} alt="House" />
     </div>
   );
 };

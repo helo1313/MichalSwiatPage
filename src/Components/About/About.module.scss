@@ -1,0 +1,36 @@
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.textContainer {
+    position: absolute;
+    top: 8%;
+    bottom: 8%;
+    margin-left: 20px;
+    width: 50%;
+    overflow: hidden;
+}
+
+.aboutText {
+    text-align: justify;
+}
+
+.map {
+    position: absolute;
+    right: 10px;
+    width: 25%;
+}
+
+.map.first {
+    top: 0;
+}
+
+.map.secound {
+    top: 37.5%;
+}
+
+.map.third {
+    top: 75%;
+}

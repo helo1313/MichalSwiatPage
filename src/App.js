@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Logo from "./Components/Logo/Logo";
 import Introduction from "./Components/Introduction/Introduction";
 import Project from "./Components/Project/Project";
@@ -13,15 +15,17 @@ import House02Map from "./images/Lanowa/Lanowa_Map.svg";
 import House03Map from "./images/NaLini/NaLini_Map.svg";
 
 function App() {
+  const [aboutPageActive, setAboutPageActive] = useState(false);
+
   return (
     <div className="wrapper">
       <Frame />
       <Logo />
+      {aboutPageActive && <About />}
       <Introduction />
       <Project image={House01} map={House01Map}></Project>
       <Project image={House02} map={House02Map}></Project>
       <Project image={House03} map={House03Map}></Project>
-      <About />
     </div>
   );
 }

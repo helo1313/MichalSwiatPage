@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 
 import Logo from "./Components/Logo/Logo";
 import Introduction from "./Components/Introduction/Introduction";
@@ -17,11 +18,28 @@ import House03Map from "./images/NaLini/NaLini_Map.svg";
 function App() {
   const [aboutPageActive, setAboutPageActive] = useState(false);
 
+  const handlers = useSwipeable({
+    onSwipedRight: () => showAboutPage(),
+    onSwipedLeft: () => {
+      if (aboutPageActive) {
+        closeAboutPage();
+      }
+    },
+  });
+
+  const showAboutPage = () => {
+    setAboutPageActive(true);
+  };
+
+  const closeAboutPage = () => {
+    setAboutPageActive(false);
+  };
+
   return (
-    <div className="wrapper">
+    <div className="wrapper" {...handlers}>
       <Frame />
       <Logo />
-      {aboutPageActive && <About />}
+      <About isActive={aboutPageActive} />
       <Introduction />
       <Project image={House01} map={House01Map}></Project>
       <Project image={House02} map={House02Map}></Project>

@@ -4,9 +4,11 @@ import House03Map from "../../images/NaLini/NaLini_Map.svg";
 
 import styles from "./About.module.scss";
 
-const About = () => {
+const About = (props) => {
   return (
-    <div className={styles.container}>
+    <div
+      className={`${styles.container} ${props.isActive ? styles.active : ""}`}
+    >
       <div className={styles.textContainer}>
         <p className={styles.aboutText}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

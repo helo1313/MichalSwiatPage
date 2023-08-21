@@ -10,7 +10,7 @@ const ProjectDesc = (props) => {
         <p>Author:</p>
         <p>Created during:</p>
         <p>Vizualization:</p>
-      </div>
+      </div>{" "}
     </div>
   );
 };

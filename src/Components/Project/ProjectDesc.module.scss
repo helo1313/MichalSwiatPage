@@ -1,4 +1,6 @@
 .project {
+    display: flex;
+    align-items: flex-end;
     position: absolute;
     width: 100%;
     height: 33.33vh;
@@ -6,10 +8,13 @@
     overflow: hidden;
     background-color: white;
     border-top: 2px solid black;
-    z-index: 10;
     transition: 0.5s;
 }
 
 .active {
     right:0;
+}
+
+.projectDescripton {
+    margin: 20px 20px;
 }

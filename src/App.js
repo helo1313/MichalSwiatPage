@@ -17,12 +17,21 @@ import House03Map from "./images/NaLini/NaLini_Map.svg";
 
 function App() {
   const [aboutPageActive, setAboutPageActive] = useState(false);
+  const [descriptonPageActive, setDescriptonPageActive] = useState(false);
 
   const handlers = useSwipeable({
-    onSwipedRight: () => showAboutPage(),
+    onSwipedRight: () => {
+      if (descriptonPageActive) {
+        closeDescriptionPage();
+      } else if (!aboutPageActive) {
+        showAboutPage();
+      }
+    },
     onSwipedLeft: () => {
       if (aboutPageActive) {
         closeAboutPage();
+      } else if (!descriptonPageActive) {
+        showDescriptionPage();
       }
     },
   });
@@ -35,15 +44,35 @@ function App() {
     setAboutPageActive(false);
   };
 
+  const showDescriptionPage = () => {
+    setDescriptonPageActive(true);
+  };
+
+  const closeDescriptionPage = () => {
+    setDescriptonPageActive(false);
+  };
+
   return (
     <div className="wrapper" {...handlers}>
       <Frame />
       <Logo />
       <About isActive={aboutPageActive} />
       <Introduction />
-      <Project image={House01} map={House01Map}></Project>
-      <Project image={House02} map={House02Map}></Project>
-      <Project image={House03} map={House03Map}></Project>
+      <Project
+        image={House01}
+        map={House01Map}
+        descriptionIsActive={descriptonPageActive}
+      ></Project>
+      <Project
+        image={House02}
+        map={House02Map}
+        descriptionIsActive={descriptonPageActive}
+      ></Project>
+      <Project
+        image={House03}
+        map={House03Map}
+        descriptionIsActive={descriptonPageActive}
+      ></Project>
     </div>
   );
 }

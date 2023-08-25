@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 
+import projectsData from "./Data/Projects.json";
+
 import Logo from "./Components/Logo/Logo";
 import Introduction from "./Components/Introduction/Introduction";
 import Project from "./Components/Project/Project";
@@ -58,21 +60,15 @@ function App() {
       <Logo />
       <About isActive={aboutPageActive} />
       <Introduction />
-      <Project
-        image={House01}
-        map={House01Map}
-        descriptionIsActive={descriptonPageActive}
-      ></Project>
-      <Project
-        image={House02}
-        map={House02Map}
-        descriptionIsActive={descriptonPageActive}
-      ></Project>
-      <Project
-        image={House03}
-        map={House03Map}
-        descriptionIsActive={descriptonPageActive}
-      ></Project>
+
+      {projectsData.map((project) => (
+        <Project
+          data={project}
+          image={House01}
+          map={House01Map}
+          descriptionIsActive={descriptonPageActive}
+        ></Project>
+      ))}
     </div>
   );
 }

@@ -1,13 +1,25 @@
 @import "./Scss/reset";
 @import "./Scss/variables";
+@import "./Scss/mixin";
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
 html {
   font-family: $font-primary;
 
-  @media (min-width: 414px) {
-    font-size: 16px;
-    
+  @include mq(smartphone) {
+    font-size: 24px;
+  }
+
+  @include mq(smartphone-large) {
+    font-size: 28px;
+  }
+
+  @include mq(tablet) {
+    font-size: 32px;
+  }
+
+  @include mq(tablet-large) {
+    font-size: 35px;
   }
 }

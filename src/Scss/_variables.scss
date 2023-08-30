@@ -6,3 +6,13 @@ $font-primary: 'Work Sans', sans-serif;
 // Frame
 $FrameSize: 5px;
 $FrameColor: #000000;
+
+// Brakepoints
+$brakepoints: (
+    smartphone: (min-width: 460px),
+    smartphone-large: (min-width: 640px),
+    tablet: (min-width: 800px),
+    tablet-large: (min-width: 1024px),
+    desktop-small: (min-width: 1280px),
+    desktop: (min-width: 1920px),
+)

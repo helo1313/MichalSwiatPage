@@ -1,0 +1,13 @@
+@import "./variables.scss";
+
+@mixin mq($brakepoint){
+    $size: map-get($map: $brakepoints, $key: $brakepoint);
+    @if ($size) {
+        @media #{$size} {
+            @content;
+        }
+    }
+    @else {
+        @error '"#{$brakepoint}" - No brakepoint found';
+    }
+}

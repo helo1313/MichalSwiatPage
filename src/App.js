@@ -62,7 +62,7 @@ function App() {
       <Frame />
       <Logo />
       <About isActive={aboutPageActive} />
-      <Introduction />
+      {isMobile && <Introduction />}
 
       {projectsData.map((project) => (
         <Project

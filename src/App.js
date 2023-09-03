@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
+import useIsMobile from "./hooks/use-is-mobile";
 
 import projectsData from "./Data/Projects.json";
 
@@ -20,6 +21,8 @@ import House03Map from "./images/NaLini/NaLini_Map.svg";
 function App() {
   const [aboutPageActive, setAboutPageActive] = useState(false);
   const [descriptonPageActive, setDescriptonPageActive] = useState(false);
+
+  const isMobile = useIsMobile();
 
   const handlers = useSwipeable({
     onSwipedRight: () => {

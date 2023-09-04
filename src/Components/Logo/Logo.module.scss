@@ -1,6 +1,23 @@
+@import "../../Scss/mixin";
+
 .logo {
   position: fixed;
   left: 20px;
   top: 20px;
   z-index: 999;
+
+  @include mq(desktop-small){
+    top: calc(50vh);
+    left: 60px;
+    transform: translateY(-50%);
+
+    p {
+      color: white;
+      transition: .5s;
+    }
+  }
+}
+
+p.black {
+  color: black;
 }

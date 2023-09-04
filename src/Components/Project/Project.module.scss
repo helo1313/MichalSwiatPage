@@ -1,9 +1,15 @@
+@import "../../Scss/mixin";
+
 .project {
     position: relative;
     width: 100%;
     height: 33.33vh;
     overflow: hidden;
     border-top: 2px solid black;
+
+    @include mq(desktop-small) {
+        height: 100vh;
+    }
 }
 
 .image {

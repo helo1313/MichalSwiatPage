@@ -11,12 +11,8 @@ import Frame from "./Components/Frame/Frame";
 import About from "./Components/About/About";
 
 import House01 from "./images/Dookola/Dookola.png";
-import House02 from "./images/Lanowa/Lanowa.png";
-import House03 from "./images/NaLini/NaLini.png";
 
 import House01Map from "./images/Dookola/Dookola_Map.svg";
-import House02Map from "./images/Lanowa/Lanowa_Map.svg";
-import House03Map from "./images/NaLini/NaLini_Map.svg";
 
 function App() {
   const [aboutPageActive, setAboutPageActive] = useState(false);
@@ -57,10 +53,18 @@ function App() {
     setDescriptonPageActive(false);
   };
 
+  const onPageClicked = () => {
+    if (aboutPageActive) {
+      closeAboutPage();
+    } else {
+      showAboutPage();
+    }
+  };
+
   return (
-    <div className="wrapper" {...handlers}>
+    <div className="wrapper" {...handlers} onClick={onPageClicked}>
       <Frame />
-      <Logo />
+      <Logo black={aboutPageActive} />
       <About isActive={aboutPageActive} />
       {isMobile && <Introduction />}
 

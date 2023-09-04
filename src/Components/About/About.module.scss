@@ -1,9 +1,11 @@
+@import "../../Scss/mixin";
+
 .container {
     z-index: 4;
     position: fixed;
     width: 100vw;
     height: 100vh;
-    left:-100%;
+    left:-110%;
     background-color: whitesmoke;
     transition: 0.5s;
 }
@@ -15,10 +17,21 @@
     margin-left: 20px;
     width: 50%;
     overflow: hidden;
+
+    @include mq(desktop-small){
+     right: 8%;
+     font-size: 0.5rem;
+    }
 }
 
 .aboutText {
     text-align: justify;
+    font-style: italic;
+
+    span {
+        text-transform: uppercase;
+        font-style: normal;
+    }
 }
 
 .map {

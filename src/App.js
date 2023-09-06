@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import useIsMobile from "./hooks/use-is-mobile";
 
-import projectsData from "./Data/Projects.json";
+import projectsData from "./Data/projects-data";
 
 import Logo from "./Components/Logo/Logo";
 import Introduction from "./Components/Introduction/Introduction";
@@ -71,7 +71,6 @@ function App() {
       {projectsData.map((project) => (
         <Project
           data={project}
-          image={House01}
           map={House01Map}
           descriptionIsActive={descriptonPageActive}
         ></Project>

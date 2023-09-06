@@ -38,19 +38,27 @@ function App() {
   });
 
   const showAboutPage = () => {
-    setAboutPageActive(true);
+    if (!descriptonPageActive) {
+      setAboutPageActive(true);
+    }
   };
 
   const closeAboutPage = () => {
-    setAboutPageActive(false);
+    if (!descriptonPageActive) {
+      setAboutPageActive(false);
+    }
   };
 
   const showDescriptionPage = () => {
-    setDescriptonPageActive(true);
+    if (!aboutPageActive) {
+      setDescriptonPageActive(true);
+    }
   };
 
   const closeDescriptionPage = () => {
-    setDescriptonPageActive(false);
+    if (!aboutPageActive) {
+      setDescriptonPageActive(false);
+    }
   };
 
   const onPageClicked = () => {
@@ -63,7 +71,7 @@ function App() {
 
   return (
     <div className="wrapper" {...handlers} onClick={onPageClicked}>
-      <Frame />
+      {isMobile && <Frame />}
       <Logo black={aboutPageActive} />
       <About isActive={aboutPageActive} />
       {isMobile && <Introduction />}
@@ -73,6 +81,8 @@ function App() {
           data={project}
           map={House01Map}
           descriptionIsActive={descriptonPageActive}
+          showDescriptionPage={showDescriptionPage}
+          closeDescriptionPage={closeDescriptionPage}
         ></Project>
       ))}
     </div>

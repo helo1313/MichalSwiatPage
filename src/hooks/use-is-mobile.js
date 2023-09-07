@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(true);

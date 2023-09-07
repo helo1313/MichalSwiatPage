@@ -1,11 +1,8 @@
 import ProjectDesc from "./ProjectDesc";
 
 import styles from "./Project.module.scss";
-import useIsMobile from "../../hooks/use-is-mobile";
 
 const Project = (props) => {
-  const isMobile = useIsMobile();
-
   return (
     <div className={styles.project}>
       <ProjectDesc

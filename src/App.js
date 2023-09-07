@@ -10,8 +10,6 @@ import Project from "./Components/Project/Project";
 import Frame from "./Components/Frame/Frame";
 import About from "./Components/About/About";
 
-import House01 from "./images/Dookola/Dookola.png";
-
 import House01Map from "./images/Dookola/Dookola_Map.svg";
 
 function App() {

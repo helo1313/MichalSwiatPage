@@ -14,11 +14,14 @@ const About = (props) => {
     <div
       className={`${styles.container} ${props.isActive ? styles.active : ""}`}
     >
-      <div className={styles.textContainer}>
+      <div className={styles.contentBox}>
+        <ul className={styles.aboutList}>
+          <li className={styles.activeItem}>About me</li>
+          <li>Idea</li>
+          <li>Process</li>
+          <li>Contact</li>
+        </ul>
         <p className={styles.aboutText}>
-          {!isMobile && (
-            <span>Analiza - Wywiad - Idea - Projekt - Realizacja </span>
-          )}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -34,22 +37,11 @@ const About = (props) => {
           occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
           adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat. Duis aute irure dolor in reprehenderit in
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.
+          magna aliqua.
         </p>
       </div>
       {isMobile && (
-        <Fragment>
+        <div className={styles.mapbox}>
           <img
             className={`${styles.map} ${styles.first}`}
             src={House01Map}
@@ -65,7 +57,7 @@ const About = (props) => {
             src={House03Map}
             alt="HouseMap"
           />
-        </Fragment>
+        </div>
       )}
     </div>
   );

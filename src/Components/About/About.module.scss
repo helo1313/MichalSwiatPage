@@ -1,6 +1,8 @@
 @import "../../Scss/mixin";
 
 .container {
+    display: flex;
+    flex-direction: row;
     z-index: 4;
     position: fixed;
     width: 100vw;
@@ -8,7 +10,70 @@
     left:-110%;
     background-color: whitesmoke;
     transition: 0.5s;
+
+    // @include mq(desktop-small) {
+    //     flex-direction: column;
+    // }
 }
+
+.contentBox{
+    display: flex;
+    flex-direction: column;
+    margin: 10% 5% 5% 5%;
+    width: 70%;
+    overflow: hidden;
+
+    @include mq(desktop-small) {
+        margin: 0% 0% 5% 35%;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.aboutList{
+    margin-top: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: lighten(black, 50%);
+    
+
+    @include mq(desktop-small) {
+        margin-top: 0;
+        min-width: 20%;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+
+    li {
+        margin: 8px 0;
+    }
+}
+
+.activeItem {
+    color: black;
+    text-decoration: underline;
+}
+
+.aboutText {
+    margin-top: 4%;
+    text-align: justify;
+    font-style: italic;
+
+    span {
+        text-transform: uppercase;
+        font-style: normal;
+    }
+
+    @include mq(desktop-small){
+        margin-top: 0%;
+        padding: 3%;
+        font-size: 0.7rem;
+       }
+}
+
 
 .textContainer {
     position: absolute;
@@ -24,15 +89,6 @@
     }
 }
 
-.aboutText {
-    text-align: justify;
-    font-style: italic;
-
-    span {
-        text-transform: uppercase;
-        font-style: normal;
-    }
-}
 
 .map {
     position: absolute;

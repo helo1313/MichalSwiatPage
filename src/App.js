@@ -16,7 +16,6 @@ function App() {
   const [aboutPageActive, setAboutPageActive] = useState(false);
   const [descriptonPageActive, setDescriptonPageActive] = useState(false);
 
-  let isThrottled = false;
   const isMobile = useIsMobile();
 
   const handlers = useSwipeable({
@@ -68,18 +67,6 @@ function App() {
     }
   };
 
-  const listenScroll = (event) => {
-    if (isThrottled) return;
-    isThrottled = true;
-
-    setTimeout(() => {
-      isThrottled = false;
-    }, 1000);
-
-    const direction = event.deltaY > 0 ? 1 : -1;
-    scroll(direction);
-  };
-
   const scroll = (direction) => {
     let currentY = window.scrollY;
     let height = window.innerHeight;
@@ -98,6 +85,20 @@ function App() {
   };
 
   useEffect(() => {
+    let isThrottled = false;
+
+    const listenScroll = (event) => {
+      if (isThrottled) return;
+      isThrottled = true;
+
+      setTimeout(() => {
+        isThrottled = false;
+      }, 1000);
+
+      const direction = event.deltaY > 0 ? 1 : -1;
+      scroll(direction);
+    };
+
     document.addEventListener("wheel", (event) => listenScroll(event), {
       passive: false,
     });

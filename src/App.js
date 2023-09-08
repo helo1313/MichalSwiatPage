@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import useIsMobile from "./hooks/use-is-mobile";
 

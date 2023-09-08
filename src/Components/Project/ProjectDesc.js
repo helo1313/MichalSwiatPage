@@ -5,7 +5,6 @@ import styles from "./ProjectDesc.module.scss";
 const ProjectDesc = (props) => {
   const isMobile = useIsMobile();
   const data = props.data;
-  console.log(data);
 
   return (
     <div className={`${styles.project} ${props.isActive ? styles.active : ""}`}>

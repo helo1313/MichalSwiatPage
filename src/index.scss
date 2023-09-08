@@ -23,3 +23,10 @@ html {
     font-size: 35px;
   }
 }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overscroll-behavior: none;
+}

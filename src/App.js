@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import useIsMobile from "./hooks/use-is-mobile";
 
@@ -16,6 +16,7 @@ function App() {
   const [aboutPageActive, setAboutPageActive] = useState(false);
   const [descriptonPageActive, setDescriptonPageActive] = useState(false);
 
+  let isThrottled = false;
   const isMobile = useIsMobile();
 
   const handlers = useSwipeable({
@@ -66,6 +67,43 @@ function App() {
       showAboutPage();
     }
   };
+
+  const listenScroll = (event) => {
+    if (isThrottled) return;
+    isThrottled = true;
+
+    setTimeout(() => {
+      isThrottled = false;
+    }, 1000);
+
+    const direction = event.deltaY > 0 ? 1 : -1;
+    scroll(direction);
+  };
+
+  const scroll = (direction) => {
+    let currentY = window.scrollY;
+    let height = window.innerHeight;
+
+    if (direction === 1) {
+      window.scrollTo({
+        top: currentY + height,
+        behavior: "smooth",
+      });
+    } else if (direction === -1) {
+      window.scrollTo({
+        top: currentY - height,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("wheel", (event) => listenScroll(event), {
+      passive: false,
+    });
+    document.addEventListener("swipeUp", () => scroll(1));
+    document.addEventListener("swipeDown", () => scroll(-1));
+  }, []);
 
   return (
     <div className="wrapper" {...handlers} onClick={onPageClicked}>

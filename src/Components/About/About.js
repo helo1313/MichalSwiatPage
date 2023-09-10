@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import useIsMobile from "../../hooks/use-is-mobile";
 
 import House01Map from "../../images/Dookola/Dookola_Map.svg";

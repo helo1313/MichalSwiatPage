@@ -39,6 +39,14 @@ const About = (props) => {
                   }
                 : () => {}
             }
+            onClick={
+              isMobile
+                ? () => {
+                    changeDisplayText(AboutUsText);
+                    setActiveElementIndex(1);
+                  }
+                : () => {}
+            }
           >
             About me
           </li>
@@ -46,6 +54,14 @@ const About = (props) => {
             className={activeElementIndex === 2 ? styles.activeItem : ""}
             onMouseOver={
               !isMobile
+                ? () => {
+                    changeDisplayText(IdeaText);
+                    setActiveElementIndex(2);
+                  }
+                : () => {}
+            }
+            onClick={
+              isMobile
                 ? () => {
                     changeDisplayText(IdeaText);
                     setActiveElementIndex(2);
@@ -65,6 +81,14 @@ const About = (props) => {
                   }
                 : () => {}
             }
+            onClick={
+              isMobile
+                ? () => {
+                    changeDisplayText(ProcessText);
+                    setActiveElementIndex(3);
+                  }
+                : () => {}
+            }
           >
             Process
           </li>
@@ -72,6 +96,14 @@ const About = (props) => {
             className={activeElementIndex === 4 ? styles.activeItem : ""}
             onMouseOver={
               !isMobile
+                ? () => {
+                    changeDisplayText(OfferText);
+                    setActiveElementIndex(4);
+                  }
+                : () => {}
+            }
+            onClick={
+              isMobile
                 ? () => {
                     changeDisplayText(OfferText);
                     setActiveElementIndex(4);

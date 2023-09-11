@@ -107,8 +107,11 @@ function App() {
   // }, []);
 
   return (
-    <div className="wrapper" {...handlers} onClick={onPageClicked}>
-      {isMobile && <Frame />}
+    <div
+      className="wrapper"
+      {...handlers}
+      onClick={!isMobile ? onPageClicked : () => {}}
+    >
       <Logo black={aboutPageActive} />
       <About isActive={aboutPageActive} />
       {isMobile && <Introduction />}

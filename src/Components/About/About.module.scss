@@ -36,7 +36,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: lighten(black, 50%);
+    color: lighten(black, 60%);
     
 
     @include mq(desktop-small) {
@@ -54,7 +54,7 @@
 
 .activeItem {
     color: black;
-    text-decoration: underline;
+    transition: .5s;
 }
 
 .aboutText {

@@ -118,17 +118,17 @@ const About = (props) => {
         <div className={styles.mapbox}>
           <img
             className={`${styles.map} ${styles.first}`}
-            src={data[0].image}
+            src={data[0].map}
             alt="HouseMap"
           />
           <img
             className={`${styles.map} ${styles.secound}`}
-            src={data[1].image}
+            src={data[1].map}
             alt="HouseMap"
           />
           <img
             className={`${styles.map} ${styles.third}`}
-            src={data[2].image}
+            src={data[2].map}
             alt="HouseMap"
           />
         </div>

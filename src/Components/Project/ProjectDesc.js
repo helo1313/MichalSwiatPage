@@ -6,17 +6,36 @@ const ProjectDesc = (props) => {
   const isMobile = useIsMobile();
   const data = props.data;
 
+  const desktopParagraphs = (
+    <div className={styles.projectDescripton}>
+      <div className={styles.valuesWrapper}>
+        <p>{data.name}</p>
+        <p>{data.place}</p>
+        <p>{data.year}</p>
+        <p>{data.coAuthors}</p>
+      </div>
+      <div className={styles.paragraphsWrapper}>
+        <p>Project</p>
+        <p>Place</p>
+        <p>Year</p>
+        <p>Co-Authors</p>
+      </div>
+    </div>
+  );
+
+  const mobileParagraphs = (
+    <div className={styles.projectDescripton}>
+      <p>Project: {data.name}</p>
+      <p>Place: {data.place}</p>
+      <p>Year: {data.year}</p>
+      <p>Co-Author: {data.coAuthors}</p>
+    </div>
+  );
+
   return (
     <div className={`${styles.project} ${props.isActive ? styles.active : ""}`}>
       {!isMobile && <div className={styles.projectDescriptionFrame} />}
-      <div className={styles.projectDescripton}>
-        <p>Project: {data.name}</p>
-        <p>Place:</p>
-        <p>Year:</p>
-        <p>Author:</p>
-        <p>Created during:</p>
-        <p>Vizualization:</p>
-      </div>
+      {isMobile ? mobileParagraphs : desktopParagraphs}
     </div>
   );
 };

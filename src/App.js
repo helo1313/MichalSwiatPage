@@ -9,8 +9,6 @@ import Introduction from "./Components/Introduction/Introduction";
 import Project from "./Components/Project/Project";
 import About from "./Components/About/About";
 
-import House01Map from "./images/Dookola/Dookola_Map.svg";
-
 function App() {
   const [aboutPageActive, setAboutPageActive] = useState(false);
   const [descriptonPageActive, setDescriptonPageActive] = useState(false);
@@ -118,7 +116,6 @@ function App() {
       {projectsData.map((project) => (
         <Project
           data={project}
-          map={House01Map}
           descriptionIsActive={descriptonPageActive}
           showDescriptionPage={showDescriptionPage}
           closeDescriptionPage={closeDescriptionPage}

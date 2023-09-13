@@ -9,9 +9,7 @@ import {
   ProcessText,
 } from "../../Data/about-page-data";
 
-import House01Map from "../../images/Dookola/Dookola_Map.svg";
-import House02Map from "../../images/Lanowa/Lanowa_Map.svg";
-import House03Map from "../../images/NaLini/NaLini_Map.svg";
+import data from "../../Data/projects-data.json";
 
 import styles from "./About.module.scss";
 
@@ -120,17 +118,17 @@ const About = (props) => {
         <div className={styles.mapbox}>
           <img
             className={`${styles.map} ${styles.first}`}
-            src={House01Map}
+            src={data[0].image}
             alt="HouseMap"
           />
           <img
             className={`${styles.map} ${styles.secound}`}
-            src={House02Map}
+            src={data[1].image}
             alt="HouseMap"
           />
           <img
             className={`${styles.map} ${styles.third}`}
-            src={House03Map}
+            src={data[2].image}
             alt="HouseMap"
           />
         </div>

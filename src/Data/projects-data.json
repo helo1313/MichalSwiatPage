@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "name": "Do-Okoła",
+    "place": "Gdynia",
+    "year": "2022",
+    "author": "Mikołaj Świat",
+    "createdDuring": "Pracy w biurze DG Arhiiktekic",
+    "visualization": "Mikołaj Świat",
+    "image": "/images/Dookola/Dookola.png",
+    "map": "/images/Dookola/Dookola_Map.svg"
+  },
+  {
+    "id": "2",
+    "name": "Lanowa",
+    "place": "Gdynia",
+    "year": "2022",
+    "author": "Mikołaj Świat",
+    "createdDuring": "Pracy w biurze DG Arhiiktekic",
+    "visualization": "Mikołaj Świat",
+    "image": "/images/Lanowa/Lanowa.png",
+    "map": "/images/Lanowa/Lanowa_Map.svg"
+  },
+  {
+    "id": "3",
+    "name": "Na Lini",
+    "place": "Gdynia",
+    "year": "2022",
+    "author": "Mikołaj Świat",
+    "createdDuring": "Pracy w biurze DG Arhiiktekic",
+    "visualization": "Mikołaj Świat",
+    "image": "/images/NaLini/NaLini.png",
+    "map": "/images/NaLini/NaLini_Map.svg"
+  },
+  {
+    "id": "4",
+    "name": "Double Couple",
+    "place": "Gdynia",
+    "year": "2022",
+    "author": "Mikołaj Świat",
+    "createdDuring": "Pracy w biurze DG Arhiiktekic",
+    "visualization": "Mikołaj Świat",
+    "image": "/images/DoubleCouple/DoubleCouple.jpg",
+    "map": "/images/DoubleCouple/DoubleCouple_Map.svg"
+  },
+  {
+    "id": "5",
+    "name": "Zielone Zakrety",
+    "place": "Gdynia",
+    "year": "2023",
+    "author": "Mikołaj Świat",
+    "createdDuring": "Pracy w biurze DG Arhiiktekic",
+    "visualization": "Mikołaj Świat",
+    "image": "/images/ZieloneZakrety/ZieloneZakrety.jpg",
+    "map": "/images/ZieloneZakrety/ZieloneZakrety_map.svg"
+  },
+  {
+    "id": "6",
+    "name": "Zygzak",
+    "place": "Gdynia",
+    "year": "2022",
+    "author": "Mikołaj Świat",
+    "createdDuring": "Pracy w biurze DG Arhiiktekic",
+    "visualization": "Mikołaj Świat",
+    "image": "../images/Zygzak/Zygzak.jpg",
+    "map": "../images/Zygzak/Zygzak_Map.svg"
+  }
+]

@@ -29,7 +29,7 @@ const Project = (props) => {
       <img className={styles.image} src={props.data.image} alt="House" />
       <img
         className={styles.map}
-        src={props.map}
+        src={props.data.map}
         alt="HouseMap"
         onMouseOver={showDescription}
         onMouseOut={hideDescription}

@@ -39,19 +39,19 @@
         background-color: white;
 
         .paragraphsWrapper {
-            margin: 20px 20px;
+            margin: 10px 10px;
             color: lighten(black, 85%);
         }
 
         .valuesWrapper {
-            margin: 20px 20px;
+            margin: 10px 10px;
             color: black;
         }
 
         p{
             text-transform: uppercase;
-            font-size: 0.8rem;
-            line-height: 1.1rem;
+            font-size: 0.5rem;
+            line-height: 1.0rem;
         }
     }
 }

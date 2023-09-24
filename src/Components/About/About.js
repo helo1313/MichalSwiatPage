@@ -46,7 +46,7 @@ const About = (props) => {
                 : () => {}
             }
           >
-            About me
+            O nas
           </li>
           <li
             className={activeElementIndex === 2 ? styles.activeItem : ""}
@@ -88,7 +88,7 @@ const About = (props) => {
                 : () => {}
             }
           >
-            Process
+            Proces
           </li>
           <li
             className={activeElementIndex === 4 ? styles.activeItem : ""}
@@ -109,30 +109,11 @@ const About = (props) => {
                 : () => {}
             }
           >
-            Offer
+            Oferta
           </li>
         </ul>
         <p className={styles.aboutText}>{displayText}</p>
       </div>
-      {isMobile && (
-        <div className={styles.mapbox}>
-          <img
-            className={`${styles.map} ${styles.first}`}
-            src={data[0].map}
-            alt="HouseMap"
-          />
-          <img
-            className={`${styles.map} ${styles.secound}`}
-            src={data[1].map}
-            alt="HouseMap"
-          />
-          <img
-            className={`${styles.map} ${styles.third}`}
-            src={data[2].map}
-            alt="HouseMap"
-          />
-        </div>
-      )}
     </div>
   );
 };

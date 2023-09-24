@@ -10,17 +10,13 @@
     left:-110%;
     background-color: whitesmoke;
     transition: 0.5s;
-
-    // @include mq(desktop-small) {
-    //     flex-direction: column;
-    // }
 }
 
 .contentBox{
     display: flex;
     flex-direction: column;
     margin: 10% 5% 5% 5%;
-    width: 70%;
+    width: 100%;
     overflow: hidden;
 
     @include mq(desktop-small) {
@@ -49,6 +45,7 @@
 
     li {
         margin: 8px 0;
+        text-transform: uppercase;
     }
 }
 
@@ -59,19 +56,15 @@
 
 .aboutText {
     margin-top: 4%;
-    text-align: justify;
-    font-style: italic;
-
-    span {
-        text-transform: uppercase;
-        font-style: normal;
-    }
+    text-align: center;
+    font-style: normal;
+    font-size: 0.9rem;
 
     @include mq(desktop-small){
         margin-top: 0%;
         padding: 6%;
-        font-size: 0.7rem;
-        line-height: 1.1rem;
+        font-size: 0.45rem;
+        line-height: 0.8rem;
        }
 }
 
@@ -88,25 +81,6 @@
      right: 8%;
      font-size: 0.5rem;
     }
-}
-
-
-.map {
-    position: absolute;
-    right: 0px;
-    width: 30%;
-}
-
-.map.first {
-    top: 0;
-}
-
-.map.secound {
-    top: 33.0%;
-}
-
-.map.third {
-    top: 66%;
 }
 
 .active {

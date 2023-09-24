@@ -12,13 +12,13 @@ const ProjectDesc = (props) => {
         <p>{data.name}</p>
         <p>{data.place}</p>
         <p>{data.year}</p>
-        <p>{data.coAuthors}</p>
+        {data.coAuthors !== "" && <p>{data.coAuthors}</p>}
       </div>
       <div className={styles.paragraphsWrapper}>
         <p>Project</p>
         <p>Place</p>
         <p>Year</p>
-        <p>Co-Authors</p>
+        {data.coAuthors !== "" && <p>Co-Authors</p>}
       </div>
     </div>
   );
@@ -28,7 +28,7 @@ const ProjectDesc = (props) => {
       <p>Project: {data.name}</p>
       <p>Place: {data.place}</p>
       <p>Year: {data.year}</p>
-      <p>Co-Author: {data.coAuthors}</p>
+      {data.coAuthors !== "" && <p>Co-Author: {data.coAuthors}</p>}
     </div>
   );
 

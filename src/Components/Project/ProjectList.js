@@ -4,13 +4,18 @@ import styles from "./ProjectList.module.scss";
 
 const ProjectList = (props) => {
   return (
-    <div className={styles.projectList}>
+    <div
+      className={styles.projectList}
+      onMouseOver={props.onHover}
+      onMouseOut={props.onUnhover}
+    >
       {projectsData.map((project, index) => (
         <img
           src={project.map}
-          className={`${styles.map} ${
-            index === props.activeIndex ? styles.highlighted : undefined
-          }`}
+          className={`
+          ${styles.map} 
+          ${index === props.activeIndex ? styles.highlighted : undefined}
+          ${props.isDescriptionActive ? styles.black : undefined}`}
           alt="house map"
         />
       ))}

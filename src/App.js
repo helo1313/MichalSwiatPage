@@ -17,8 +17,6 @@ function App() {
 
   const isMobile = useIsMobile();
 
-  console.log(activeSection);
-
   const handlers = useSwipeable({
     onSwipedRight: () => {
       if (descriptonPageActive) {
@@ -68,10 +66,14 @@ function App() {
     }
   };
 
-  const projects = projectsData.map((project) => (
+  const projects = projectsData.map((project, index) => (
     <Project
       data={project}
-      descriptionIsActive={descriptonPageActive}
+      descriptionIsActive={
+        isMobile
+          ? descriptonPageActive
+          : descriptonPageActive && index === activeSection
+      }
       showDescriptionPage={showDescriptionPage}
       closeDescriptionPage={closeDescriptionPage}
     ></Project>
@@ -115,7 +117,14 @@ function App() {
       {isMobile && <Introduction />}
 
       {projects}
-      {!isMobile && <ProjectList activeIndex={activeSection} />}
+      {!isMobile && (
+        <ProjectList
+          isDescriptionActive={descriptonPageActive}
+          activeIndex={activeSection}
+          onHover={showDescriptionPage}
+          onUnhover={closeDescriptionPage}
+        />
+      )}
     </div>
   );
 }

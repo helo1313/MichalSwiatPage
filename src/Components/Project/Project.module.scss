@@ -25,3 +25,7 @@
     height: 20%;
     z-index: 3;
 }
+
+.black {
+    filter: brightness(0) saturate(100%);
+}

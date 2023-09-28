@@ -13,8 +13,11 @@ import ProjectList from "./Components/Project/ProjectList";
 function App() {
   const [aboutPageActive, setAboutPageActive] = useState(false);
   const [descriptonPageActive, setDescriptonPageActive] = useState(false);
+  const [activeSection, setActiveSection] = useState(0);
 
   const isMobile = useIsMobile();
+
+  console.log(activeSection);
 
   const handlers = useSwipeable({
     onSwipedRight: () => {
@@ -65,6 +68,42 @@ function App() {
     }
   };
 
+  const projects = projectsData.map((project) => (
+    <Project
+      data={project}
+      descriptionIsActive={descriptonPageActive}
+      showDescriptionPage={showDescriptionPage}
+      closeDescriptionPage={closeDescriptionPage}
+    ></Project>
+  ));
+
+  const HandleScroll = (event) => {
+    const currentScroll = window.scrollY;
+
+    var closestIndex = 0;
+    var closestElementDistance = 9999;
+
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section, index) => {
+      const distance = Math.abs(section.offsetTop - currentScroll);
+
+      if (distance > closestElementDistance) {
+        return;
+      }
+
+      closestElementDistance = distance;
+      closestIndex = index;
+    });
+
+    if (activeSection !== closestIndex) {
+      setActiveSection(closestIndex);
+    }
+  };
+
+  document.addEventListener("wheel", HandleScroll, {
+    passive: false,
+  });
+
   return (
     <div
       className="wrapper"
@@ -75,15 +114,8 @@ function App() {
       <About isActive={aboutPageActive} />
       {isMobile && <Introduction />}
 
-      {projectsData.map((project) => (
-        <Project
-          data={project}
-          descriptionIsActive={descriptonPageActive}
-          showDescriptionPage={showDescriptionPage}
-          closeDescriptionPage={closeDescriptionPage}
-        ></Project>
-      ))}
-      {!isMobile && <ProjectList />}
+      {projects}
+      {!isMobile && <ProjectList activeIndex={activeSection} />}
     </div>
   );
 }

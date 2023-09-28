@@ -20,7 +20,7 @@ const Project = (props) => {
   };
 
   return (
-    <div className={styles.project}>
+    <section className={styles.project} id="Project">
       <ProjectDesc
         isActive={isMobile ? props.descriptionIsActive : descriptonActive}
         map={props.map}
@@ -36,7 +36,7 @@ const Project = (props) => {
           onMouseOut={hideDescription}
         />
       )}
-    </div>
+    </section>
   );
 };
 

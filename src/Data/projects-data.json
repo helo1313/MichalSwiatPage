@@ -52,5 +52,32 @@
     "coAuthors": "",
     "image": "../images/Zygzak/Zygzak.jpg",
     "map": "../images/Zygzak/Zygzak_Map.svg"
+  },
+  {
+    "id": "7",
+    "name": "Leźno",
+    "place": "",
+    "year": "",
+    "coAuthors": "",
+    "image": "../images/Lezno/Lezno.jpg",
+    "map": "../images/Lezno/Lezno_map.svg"
+  },
+  {
+  "id": "8",
+  "name": "Rozsunięcie",
+  "place": "",
+  "year": "",
+  "coAuthors": "",
+  "image": "../images/Rozsuniecie/Rozsuniecie.jpg",
+  "map": "../images/Rozsuniecie/Rozsuniecie_map.svg"
+  },
+  {
+  "id": "9",
+  "name": "Bliźniak",
+  "place": "",
+  "year": "",
+  "coAuthors": "",
+  "image": "../images/Blizniak/Blizniak.jpg",
+  "map": "../images/Blizniak/Blizniak_map.svg"
   }
 ]

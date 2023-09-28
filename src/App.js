@@ -65,45 +65,6 @@ function App() {
     }
   };
 
-  // const scroll = (direction) => {
-  //   let currentY = window.scrollY;
-  //   let height = window.innerHeight;
-
-  //   if (direction === 1) {
-  //     window.scrollTo({
-  //       top: currentY + height,
-  //       behavior: "smooth",
-  //     });
-  //   } else if (direction === -1) {
-  //     window.scrollTo({
-  //       top: currentY - height,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   let isThrottled = false;
-
-  //   const listenScroll = (event) => {
-  //     if (isThrottled) return;
-  //     isThrottled = true;
-
-  //     setTimeout(() => {
-  //       isThrottled = false;
-  //     }, 1000);
-
-  //     const direction = event.deltaY > 0 ? 1 : -1;
-  //     scroll(direction);
-  //   };
-
-  //   document.addEventListener("wheel", (event) => listenScroll(event), {
-  //     passive: false,
-  //   });
-  //   document.addEventListener("swipeUp", () => scroll(1));
-  //   document.addEventListener("swipeDown", () => scroll(-1));
-  // }, []);
-
   return (
     <div
       className="wrapper"

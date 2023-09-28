@@ -8,6 +8,7 @@ import Logo from "./Components/Logo/Logo";
 import Introduction from "./Components/Introduction/Introduction";
 import Project from "./Components/Project/Project";
 import About from "./Components/About/About";
+import ProjectList from "./Components/Project/ProjectList";
 
 function App() {
   const [aboutPageActive, setAboutPageActive] = useState(false);
@@ -121,6 +122,7 @@ function App() {
           closeDescriptionPage={closeDescriptionPage}
         ></Project>
       ))}
+      {!isMobile && <ProjectList />}
     </div>
   );
 }

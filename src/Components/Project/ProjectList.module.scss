@@ -1,0 +1,23 @@
+.projectList {
+    position: fixed;
+    height: 100vh;
+    width: 30vw;
+    top:0;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.map {
+    height: 10%;
+}
+
+.black {
+    filter: brightness(0) saturate(100%);
+}
+
+.highlighted {
+    filter: brightness(0) saturate(100%) invert(97%) sepia(23%) saturate(3483%) hue-rotate(329deg) brightness(88%) contrast(93%);
+}

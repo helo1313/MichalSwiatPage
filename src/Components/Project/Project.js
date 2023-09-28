@@ -27,13 +27,15 @@ const Project = (props) => {
         data={props.data}
       />
       <img className={styles.image} src={props.data.image} alt="House" />
-      <img
-        className={styles.map}
-        src={props.data.map}
-        alt="HouseMap"
-        onMouseOver={showDescription}
-        onMouseOut={hideDescription}
-      />
+      {isMobile && (
+        <img
+          className={styles.map}
+          src={props.data.map}
+          alt="HouseMap"
+          onMouseOver={showDescription}
+          onMouseOut={hideDescription}
+        />
+      )}
     </div>
   );
 };

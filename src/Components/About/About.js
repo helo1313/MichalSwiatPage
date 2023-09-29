@@ -17,7 +17,12 @@ const About = (props) => {
 
   const isMobile = useIsMobile();
 
-  const changeDisplayText = (text) => setDisplayText(text);
+  const handleInteraction = (NewText, NewIndex) => {
+    return () => {
+      setDisplayText(NewText);
+      setActiveElementIndex(NewIndex);
+    };
+  };
 
   return (
     <div
@@ -28,84 +33,34 @@ const About = (props) => {
           <li
             className={activeElementIndex === 1 ? styles.activeItem : ""}
             onMouseOver={
-              !isMobile
-                ? () => {
-                    changeDisplayText(AboutUsText);
-                    setActiveElementIndex(1);
-                  }
-                : () => {}
+              !isMobile ? handleInteraction(AboutUsText, 1) : undefined
             }
-            onClick={
-              isMobile
-                ? () => {
-                    changeDisplayText(AboutUsText);
-                    setActiveElementIndex(1);
-                  }
-                : () => {}
-            }
+            onClick={isMobile ? handleInteraction(AboutUsText, 1) : undefined}
           >
             O nas
           </li>
           <li
             className={activeElementIndex === 2 ? styles.activeItem : ""}
-            onMouseOver={
-              !isMobile
-                ? () => {
-                    changeDisplayText(IdeaText);
-                    setActiveElementIndex(2);
-                  }
-                : () => {}
-            }
-            onClick={
-              isMobile
-                ? () => {
-                    changeDisplayText(IdeaText);
-                    setActiveElementIndex(2);
-                  }
-                : () => {}
-            }
+            onMouseOver={!isMobile ? handleInteraction(IdeaText, 2) : undefined}
+            onClick={isMobile ? handleInteraction(IdeaText, 2) : undefined}
           >
             Idea
           </li>
           <li
             className={activeElementIndex === 3 ? styles.activeItem : ""}
             onMouseOver={
-              !isMobile
-                ? () => {
-                    changeDisplayText(ProcessText);
-                    setActiveElementIndex(3);
-                  }
-                : () => {}
+              !isMobile ? handleInteraction(ProcessText, 3) : undefined
             }
-            onClick={
-              isMobile
-                ? () => {
-                    changeDisplayText(ProcessText);
-                    setActiveElementIndex(3);
-                  }
-                : () => {}
-            }
+            onClick={isMobile ? handleInteraction(ProcessText, 3) : undefined}
           >
             Proces
           </li>
           <li
             className={activeElementIndex === 4 ? styles.activeItem : ""}
             onMouseOver={
-              !isMobile
-                ? () => {
-                    changeDisplayText(OfferText);
-                    setActiveElementIndex(4);
-                  }
-                : () => {}
+              !isMobile ? handleInteraction(OfferText, 4) : undefined
             }
-            onClick={
-              isMobile
-                ? () => {
-                    changeDisplayText(OfferText);
-                    setActiveElementIndex(4);
-                  }
-                : () => {}
-            }
+            onClick={isMobile ? handleInteraction(OfferText, 4) : undefined}
           >
             Oferta
           </li>

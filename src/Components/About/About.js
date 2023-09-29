@@ -9,8 +9,6 @@ import {
   ProcessText,
 } from "../../Data/about-page-data";
 
-import data from "../../Data/projects-data.json";
-
 import styles from "./About.module.scss";
 
 const About = (props) => {

@@ -11,6 +11,7 @@ const ProjectList = (props) => {
     >
       {projectsData.map((project, index) => (
         <img
+          key={project.id}
           src={project.map}
           className={`
           ${styles.map} 

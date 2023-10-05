@@ -68,6 +68,7 @@ function App() {
 
   const projects = projectsData.map((project, index) => (
     <Project
+      key={project.id}
       data={project}
       descriptionIsActive={
         isMobile

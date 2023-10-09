@@ -8,11 +8,7 @@ const Project = (props) => {
 
   return (
     <section className={styles.project} id="Project">
-      <ProjectDesc
-        isActive={props.descriptionIsActive}
-        map={props.map}
-        data={props.data}
-      />
+      <ProjectDesc isActive={props.descriptionIsActive} data={props.data} />
       <img className={styles.image} src={props.data.image} alt="House" />
       {isMobile && (
         <img

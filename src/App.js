@@ -84,7 +84,7 @@ function App() {
     const currentScroll = window.scrollY;
 
     var closestIndex = 0;
-    var closestElementDistance = 9999;
+    var closestElementDistance = Number.MAX_VALUE;
 
     const sections = document.querySelectorAll("section");
     sections.forEach((section, index) => {
@@ -111,7 +111,7 @@ function App() {
     <div
       className="wrapper"
       {...handlers}
-      onClick={!isMobile ? onPageClicked : () => {}}
+      onClick={!isMobile ? onPageClicked : undefined}
     >
       <Logo black={aboutPageActive} />
       <About isActive={aboutPageActive} />
